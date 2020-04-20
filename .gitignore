@@ -5,5 +5,8 @@ target
 .settings
 .DS_Store
 
+# EVT LÖSCHEN
+.idea
+
 # Project exclude paths
 /node_modules/

@@ -37,6 +37,7 @@ public final class StringContainsUtils {
      *         The strings to search for, may be empty. Individual CharSequences may be null as well.
      *
      * @return {@code true} if any of the search CharSequences are found, {@code false} otherwise
+     * Das ist ein test
      */
     public static boolean containsAnyIgnoreCase(@Nullable final CharSequence input,
             @Nullable final String... searchTexts) {
