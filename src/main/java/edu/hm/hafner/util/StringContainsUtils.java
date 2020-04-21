@@ -37,7 +37,7 @@ public final class StringContainsUtils {
      *         The strings to search for, may be empty. Individual CharSequences may be null as well.
      *
      * @return {@code true} if any of the search CharSequences are found, {@code false} otherwise
-     * Das ist ein test
+     *
      */
     public static boolean containsAnyIgnoreCase(@Nullable final CharSequence input,
             @Nullable final String... searchTexts) {
@@ -56,7 +56,31 @@ public final class StringContainsUtils {
         return false;
     }
 
+    /**
+     * @author Peter Maier
+     * @param input
+     * @param searchTexts
+     * @return
+     */
+    public static boolean containsAllIgnoreCase(@Nullable final CharSequence input,
+            @Nullable final String... searchTexts){
+        if (StringUtils.isEmpty(input)) {
+            return false;
+        }
+        if (searchTexts == null || searchTexts.length == 0) {
+            return false;
+        }
+        boolean containsAllIgnoreCases;
+        for (String searchText : searchTexts) {
+            if (StringUtils.containsIgnoreCase(input, searchText)) {
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
     private StringContainsUtils() {
         // prevents instantiation
     }
+
 }
